@@ -70,7 +70,7 @@
             border-radius: 50px !important;
         }
 
-        /* DASHBOARD HEADER BANNER */
+        /* DASHBOARD HERO BANNER */
         .dashboard-hero {
             background: linear-gradient(135deg, #0052D4 0%, #4364F7 50%, #6FB1FC 100%);
             color: #ffffff;
@@ -108,7 +108,7 @@
         .notice-box ul {
             padding-left: 20px;
             color: #475569;
-            font-size: 0.95krem;
+            font-size: 0.95rem;
         }
         .notice-box li {
             margin-bottom: 5px;
@@ -138,7 +138,7 @@
             margin-bottom: 8px;
             color: #334155;
         }
-        .form-group input, .form-group textarea, .form-group select {
+        .form-group input, .form-group textarea {
             width: 100%;
             padding: 12px 15px;
             border: 1px solid #cbd5e1;
@@ -147,7 +147,7 @@
             outline: none;
             transition: border-color 0.3s;
         }
-        .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+        .form-group input:focus, .form-group textarea:focus {
             border-color: #0052D4;
         }
         .submit-btn {
@@ -224,10 +224,11 @@
 
         <!-- IMPORTANT NOTICE -->
         <div class="notice-box">
-            <h3>⚠️ জরুরি নির্দেশনা:</h3>
+            <h3>⚠️ জরুরি নির্দেশনা ও রেট তালিকা:</h3>
             <ul>
-                <li>প্রতিদিন সকাল ১০:০টা থেকে দুপুর ১২:০০ টার মধ্যে ফর্ম সাবমিਟ করলে সেম-ডে পিক-আপ ও ডেলিভারি নিশ্চিত করা হবে।</li>
-                <li>কাস্টমারের ফোন নম্বর এবং সম্পূর্ণ ঠিকানা (এরিয়া সহ) সঠিকভাবে প্রদান করুন।</li>
+                <li><strong>প্রথম পিকআপ সম্পূর্ণ ফ্রি!</strong></li>
+                <li>ডেলিভারি চার্জ: নারায়ণগঞ্জ শহরে <strong>৭০ টাকা</strong> এবং শহরের বাইরে <strong>৮০ টাকা</strong>।</li>
+                <li>প্রতিদিন সকাল ১০:০০ টা থেকে দুপুর ১২:০০ টার মধ্যে ফর্ম সাবমিট করলে সেম-ডে পিক-আপ নিশ্চিত করা হবে।</li>
             </ul>
         </div>
 
@@ -239,7 +240,7 @@
 
                 <!-- আপনার Web3Forms Access Key এখানে বসাবেন -->
                 <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
-                <input type="hidden" name="subject" value="🚀 নতুন পার্সেল অর্ডার এসেছে - QuickPik">
+                <input type="hidden" name="subject" value="🚀 নতুন পার্সেল অর্ডার এসেছে - QuickPick">
 
                 <div class="form-group">
                     <label>মার্চেন্ট / শপের নাম:</label>
@@ -252,27 +253,28 @@
                 </div>
 
                 <div class="form-group">
-                    <label>কাস্টমারের পূর্ণ ঠিকানা (এরিয়াসহ):</label>
-                    <textarea name="Customer_Address" rows="3" placeholder="বাসা/রোড, থানা, এরিয়া (যেমন: চাষাঢ়া, নারায়ণগঞ্জ)" required></textarea>
+                    <label>পিকআপ অ্যাড্রেস (যেখান থেকে পার্সেল সংগ্রহ করা হবে):</label>
+                    <textarea name="Pickup_Address" rows="2" placeholder="মার্চেন্টের পূর্ণ ঠিকানা ও এরিয়া" required></textarea>
                 </div>
 
                 <div class="form-group">
-                    <label>কাস্টমারের মোবাইল নম্বর:</label>
+                    <label>কাস্টমারের নাম:</label>
+                    <input type="text" name="Customer_Name" placeholder="গ্রাহকের নাম লিখুন" required>
+                </div>
+
+                <div class="form-group">
+                    <label>কাস্টমার মোবাইল নম্বর:</label>
                     <input type="tel" name="Customer_Phone" placeholder="018xxxxxxxx" required>
                 </div>
 
                 <div class="form-group">
-                    <label>সার্ভিস এরিয়া:</label>
-                    <select name="Delivery_Area" required>
-                        <option value="">এরিয়া সিলেক্ট করুন</option>
-                        <option value="Narshingdi/Narayanganj City (70 Tk)">নারায়ণগঞ্জ শহর ও চাষাঢ়া (৭০ টাকা)</option>
-                        <option value="Fatullah/Siddhirganj/Bandar (80 Tk)">ফতুল্লা, সিদ্ধিরগঞ্জ, বন্দর ও সোনারগাঁও (৮০ টাকা)</option>
-                    </select>
+                    <label>ডেলিভারি অ্যাড্রেস (যেখানে পার্সেল পৌঁছাতে হবে):</label>
+                    <textarea name="Delivery_Address" rows="3" placeholder="বাসা/রোড, থানা, এরিয়া" required></textarea>
                 </div>
 
                 <div class="form-group">
                     <label>ক্যাশ কালেকশন পরিমাণ (COD Amount Tk):</label>
-                    <input type="number" name="COD_Amount" placeholder="মোট টাকার পরিমাণ লিখুন" required>
+                    <input type="number" name="COD_Amount" placeholder="টাকার পরিমাণ লিখুন (ক্যাশ অন ডেলিভারি)" required>
                 </div>
 
                 <button type="submit" class="submit-btn">পার্সেল সাবমিট করুন</button>
@@ -285,10 +287,10 @@
     <footer>
         <div class="container">
             <h3>QuickPik Narayanganj</h3>
-            <p>হটলাইন: 09638501732 | ইমেইল: info@quickpikng.com</p>
-            <p>&copy; 2026/2027 QuickPick Narayanganj. All rights reserved.</p>
+            <p>হটলাইন: 017XXXXXXXX | ফেসবুক: QuickPikc1732</p>
+            <p>&copy; 2026 QuickPik Narayanganj. All rights reserved.</p>
         </div>
     </footer>
 
 </body>
-  </html>
+</html>
