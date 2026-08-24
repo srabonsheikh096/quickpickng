@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickPick Narayanganj | About Us</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* NAVIGATION BAR */
+        header.site-header {
+            background: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #0052D4;
+            text-decoration: none;
+        }
+        .logo span {
+            color: #FF6B6B;
+        }
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 15px;
+            align-items: center;
+        }
+        .nav-menu li a {
+            text-decoration: none;
+            color: #475569;
+            font-weight: 600;
+            font-size: 0.95rem;
+            padding: 8px 14px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        .nav-menu li a:hover, .nav-menu li a.active {
+            color: #0052D4;
+            background-color: #eff6ff;
+        }
+        .btn-merchant {
+            background-color: #0052D4 !important;
+            color: #ffffff !important;
+            border-radius: 50px !important;
+        }
+
+        /* HERO / HEADER SECTION */
+        .about-hero {
+            background: linear-gradient(135deg, #0052D4, #4364F7, #6FB1FC);
+            color: #fff;
+            padding: 50px 20px;
+            text-align: center;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 82, 212, 0.2);
+            margin-bottom: 30px;
+        }
+        .about-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .about-hero p {
+            font-size: 1.1rem;
+            color: #e0e8ff;
+        }
+
+        /* CONTENT CARD */
+        .content-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.03);
+        }
+        .content-card h2 {
+            color: #0052D4;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #eff6ff;
+            padding-bottom: 8px;
+        }
+        .content-card p {
+            color: #4a5568;
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+
+        /* VISION & MISSION GRID */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .info-box {
+            background: #ffffff;
+            border-left: 5px solid #0052D4;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.03);
+        }
+        .info-box h3 {
+            color: #1a202c;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+        .info-box p {
+            color: #4a5568;
+            font-size: 0.95rem;
+        }
+
+        /* FOUNDER SECTION */
+        .founder-box {
+            background: #eff6ff;
+            border: 1px solid #bfdbfe;
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .founder-box h3 {
+            color: #1e3a8a;
+            font-size: 1.4rem;
+            margin-bottom: 5px;
+        }
+        .founder-box .title {
+            color: #FF6B6B;
+            font-weight: bold;
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+        .founder-box p {
+            color: #334155;
+            font-size: 0.95rem;
+            max-width: 800px;
+            margin: 0 auto;
+            font-style: italic;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #1a202c;
+            color: #fff;
+            text-align: center;
+            padding: 30px;
+            border-radius: 12px;
+            margin-top: 20px;
+        }
+        footer a {
+            color: #6FB1FC;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .nav-menu {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="site-header">
+        <div class="navbar">
+            <a href="index.html" class="logo">QuickPick <span>NG</span></a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="merchant.html" class="btn-merchant">Become a Merchant</a></li>
+                <li><a href="delivery.html">Become a Delivery Hero</a></li>
+                <li><a href="track.html">Track Parcel</a></li>
+                <li><a href="about.html" class="active">About Us</a></li>
+            </ul>
+        </div>
+    </header>
+
+<div class="container">
+
+    <!-- HERO SECTION -->
+    <section class="about-hero">
+        <h1>আমাদের সম্পর্কে</h1>
+        <p>QuickPick Narayanganj — আপনার শহরের নিজস্ব ফাস্টেস্ট লোকাল ডেলিভারি পার্টনার</p>
+    </section>
+
+    <!-- OUR STORY -->
+    <div class="content-card">
+        <h2>আমাদের গল্প (Our Story)</h2>
+        <p>নারায়ণগঞ্জের ই-কমার্স ও লোকাল অনলাইন মার্চেন্টদের লজিস্টিকস সমস্যা দূর করতে **QuickPick Narayanganj**-এর যাত্রা শুরু। সময়মতো কাস্টমারের হাতে পার্সেল পৌঁছানো এবং দ্রুততম সময়ে ক্যাশ-অন-ডেলিভারির (COD) টাকা মার্চেন্টের হাতে ফিরিয়ে দেওয়াই আমাদের মূল উদ্দেশ্য।</p>
+        <p>আমরা বিশ্বাস করি, একটি শক্তিশালী ও দ্রুত ডেলিভারি নেটওয়ার্ক যেকোনো অনলাইন ব্যবসাকে কয়েক গুণ বাড়িয়ে দিতে পারে। চাষাঢ়া, ফতুল্লা, সিদ্ধিরগঞ্জ, বন্দর কিংবা সোনারগাঁও—নারায়ণগঞ্জের যেকোনো প্রান্তেই আমরা পৌঁছে দিচ্ছি বিশ্বস্ততার পার্সেল।</p>
+    </div>
+
+    <!-- VISION & MISSION -->
+    <div class="grid-2">
+        <div class="info-box">
+            <h3>🎯 আমাদের ভিশন (Our Vision)</h3>
+            <p>নারায়ণগঞ্জ শহরের ভেতরে সবচেয়ে দ্রুততম, নিরাপদ এবং প্রযুক্তি-নির্ভর হাইপার-লোকাল কুরিয়ার নেটওয়ার্ক হিসেবে নিজেদের গড়ে তোলা।</p>
+        </div>
+        <div class="info-box">
+            <h3>🚀 আমাদের মিশন (Our Mission)</h3>
+            <p>সেম-ডে ডেলিভারি সুনিশ্চিত করা, জিরো অতিরিক্ত হিডেন চার্জ রাখা এবং মার্চেন্টদের জন্য দ্রুততম পেমেন্ট সার্ভিস প্রদান করা।</p>
+        </div>
+    </div>
+
+    <!-- FOUNDER'S NOTE -->
+    <div class="founder-box">
+        <h3>ফাউন্ডার বার্তা (Founder's Note)</h3>
+        <div class="title">Founder & CEO, QuickPick Narayanganj</div>
+        <p>"নারায়ণগঞ্জের ই-কমার্স ব্যবসায়ীদের পার্সেল ডেলিভারি জনিত সব জটিলতা সমাধান করাই আমাদের লক্ষ্য। আপনার কাস্টমারের হাসি এবং ব্যবসার অগ্রগতিতে QuickPick থাকবে আপনার পাশে—সবসময়।"</p>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <h3>QuickPick Narayanganj</h3>
+        <p style="margin: 10px 0;">যোগাযোগ: QuickPikc1732 (Facebook/Hotline)</p>
+        <p style="font-size: 14px; color: #a0aec0;">&copy; 2026 QuickPik Narayanganj. All rights reserved.</p>
+    </footer>
+
+</div>
+
+</body>
+  </html>
