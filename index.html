@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QuickPick Narayanganj | Merchant Portal</title>
+    <title>QuickPick Narayanganj | Home</title>
     <style>
         * {
             box-sizing: border-box;
@@ -12,32 +12,85 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         body {
-            background-color: #f4f7f6;
-            color: #333;
+            background-color: #f8fafc;
+            color: #1e293b;
             line-height: 1.6;
         }
         .container {
             max-width: 1100px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 0 20px;
         }
+
+        /* NAVIGATION BAR */
+        header {
+            background: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #0052D4;
+            text-decoration: none;
+        }
+        .logo span {
+            color: #FF6B6B;
+        }
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 15px;
+            align-items: center;
+        }
+        .nav-menu li a {
+            text-decoration: none;
+            color: #475569;
+            font-weight: 600;
+            font-size: 0.95rem;
+            padding: 8px 14px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        .nav-menu li a:hover, .nav-menu li a.active {
+            color: #0052D4;
+            background-color: #eff6ff;
+        }
+        .btn-merchant {
+            background-color: #0052D4 !important;
+            color: #ffffff !important;
+            border-radius: 50px !important;
+        }
+        .btn-merchant:hover {
+            background-color: #1d4ed8 !important;
+        }
+
         /* HERO SECTION */
         .hero {
-            background: linear-gradient(135deg, #0052D4, #4364F7, #6FB1FC);
-            color: #fff;
-            padding: 60px 20px;
+            background: linear-gradient(135deg, #0052D4 0%, #4364F7 50%, #6FB1FC 100%);
+            color: #ffffff;
+            padding: 70px 20px;
             text-align: center;
-            border-radius: 16px;
-            box-shadow: 0 10px 25px rgba(0, 82, 212, 0.2);
-            margin-bottom: 40px;
+            border-radius: 20px;
+            margin: 30px 0;
+            box-shadow: 0 10px 25px rgba(0, 82, 212, 0.15);
         }
         .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            font-weight: 800;
         }
         .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
+            font-size: 1.25rem;
+            margin-bottom: 25px;
             color: #e0e8ff;
         }
         .tagline {
@@ -46,200 +99,196 @@
             padding: 10px 25px;
             border-radius: 50px;
             font-weight: bold;
-            font-size: 1rem;
+            font-size: 1.1rem;
             box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
         }
-        
-        /* FEATURES */
+
+        /* FEATURES SECTION */
         .section-title {
             text-align: center;
             font-size: 1.8rem;
-            margin-bottom: 30px;
-            color: #1a202c;
+            margin: 40px 0 25px 0;
+            color: #0f172a;
         }
-        .features {
-            display: flex;
-            flex-wrap: wrap;
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
             margin-bottom: 50px;
         }
-        .card {
-            flex: 1;
-            min-width: 250px;
-            background: #fff;
+        .feature-card {
+            background: #ffffff;
             padding: 30px 20px;
-            border-radius: 12px;
+            border-radius: 16px;
             text-align: center;
             border: 1px solid #e2e8f0;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.03);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            transition: transform 0.3s ease;
         }
-        .card .icon {
-            font-size: 2.5rem;
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        .feature-icon {
+            font-size: 2.8rem;
             margin-bottom: 15px;
         }
-        .card h3 {
-            color: #2b6cb0;
+        .feature-card h3 {
+            color: #1e3a8a;
             margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        .feature-card p {
+            color: #64748b;
+            font-size: 0.95rem;
         }
 
-        /* COVERAGE AREA */
-        .coverage {
-            background: #fff;
-            padding: 30px;
-            border-radius: 12px;
-            margin-bottom: 40px;
-            border: 1px solid #e2e8f0;
-            text-align: center;
-        }
-        .area-tags {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px;
-            margin-top: 15px;
-        }
-        .tag {
-            background: #edf2f7;
-            color: #2d3748;
-            padding: 8px 16px;
+        /* CTA SECTION */
+        .cta-section {
+            background-color: #ffffff;
+            border: 2px dashed #cbd5e1;
             border-radius: 20px;
-            font-weight: 600;
-        }
-
-        /* FORM EMBED SECTION */
-        .form-container {
-            background: #fff;
-            padding: 30px;
-            border-radius: 16px;
-            border: 2px dashed #cbd5e0;
+            padding: 40px 20px;
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 50px;
+        }
+        .cta-section h2 {
+            margin-bottom: 15px;
+            color: #0f172a;
+        }
+        .cta-section p {
+            color: #64748b;
+            margin-bottom: 25px;
+        }
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .btn {
+            padding: 12px 28px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        .btn-primary {
+            background-color: #0052D4;
+            color: #ffffff;
+        }
+        .btn-primary:hover {
+            background-color: #1d4ed8;
+        }
+        .btn-secondary {
+            background-color: #f1f5f9;
+            color: #334155;
+            border: 1px solid #cbd5e1;
+        }
+        .btn-secondary:hover {
+            background-color: #e2e8f0;
         }
 
         /* FOOTER */
         footer {
-            background: #1a202c;
-            color: #fff;
+            background: #0f172a;
+            color: #ffffff;
             text-align: center;
             padding: 30px;
-            border-radius: 12px;
+            border-radius: 16px 16px 0 0;
+            margin-top: 40px;
         }
-        footer a {
-            color: #6FB1FC;
-            text-decoration: none;
+        footer p {
+            color: #94a3b8;
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+
+        /* MOBILE RESPONSIVE */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .nav-menu {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 8px;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-
-    <!-- HERO SECTION -->
-    <header class="hero">
-        <h1>QuickPick Narayanganj</h1>
-        <p>নারায়ণগঞ্জের বিশ্বস্ত ও দ্রুততম সেম-ডে কুরিয়ার সার্ভিস</p>
-        <div class="tagline">Picked Today, Delivered Today! ⚡</div>
+    <!-- NAVBAR -->
+    <header>
+        <div class="container navbar">
+            <a href="index.html" class="logo">QuickPick <span>NG</span></a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="merchant.html" class="btn-merchant">Become a Merchant</a></li>
+                <li><a href="delivery.html">Become a Delivery Hero</a></li>
+                <li><a href="track.html">Track Parcel</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </div>
     </header>
 
-    <!-- WHY CHOOSE US -->
-    <h2 class="section-title">মার্চেন্টদের জন্য আমাদের বিশেষ সুবিধাসমূহ</h2>
-    <div class="features">
-        <div class="card">
-            <div class="icon">🚀</div>
-            <h3>সেম-ডে ডেলিভারি</h3>
-            <p>সকালে পিক-আপ, বিকেলেই কাস্টমারের হাতে পার্সেল ডেলিভারি সুনিশ্চিত।</p>
+    <div class="container">
+
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <h1>QuickPick Narayanganj</h1>
+            <p>নারায়ণগঞ্জের বিশ্বস্ত ও দ্রুততম সেম-ডে কুরিয়ার সার্ভিস</p>
+            <div class="tagline">Picked Today, Delivered Today! ⚡</div>
+        </section>
+
+        <!-- FEATURES SECTION -->
+        <h2 class="section-title">আমাদের সেবাসমূহ</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🚀</div>
+                <h3>সেম-ডে ডেলিভারি</h3>
+                <p>সকালে পার্সেল পিক-আপ করে বিকেলের মধ্যেই নারায়ণগঞ্জের অভ্যন্তরে দ্রুত ডেলিভারি।</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📦</div>
+                <h3>ফ্রি পিক-আপ</h3>
+                <p>আপনার দোকান বা বাসা থেকে একদম বিনামূল্যে পার্সেল রিসিভ করা হয়।</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💸</div>
+                <h3>ইনস্ট্যান্ট পেমেন্ট</h3>
+                <p>ডেলিভারি সফল হওয়ার সাথে সাথেই বিকাশ/নগদে টাকা বুঝে নিন। জিরো COD ফি!</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📍</div>
+                <h3>লোকাল কভারেজ</h3>
+                <p>চাষাঢ়া, ফতুল্লা, সিদ্ধিরগঞ্জ, বন্দর, রুপগঞ্জ, সোনারগাঁও, আড়াইহাজার ও পুরো নারায়ণগঞ্জ জুড়ে আমাদের সার্ভিস।</p>
+            </div>
         </div>
-        <div class="card">
-            <div class="icon">📦</div>
-            <h3>ফ্রি পিক-আপ</h3>
-            <p>আপনার বাসা বা দোকান থেকে একদম বিনামূল্যে পার্সেল রিসিভ করা হয়।</p>
-        </div>
-        <div class="card">
-            <div class="icon">💸</div>
-            <h3>ইনস্ট্যান্ট পেমেন্ট</h3>
-            <p>ডেলিভারি সম্পূর্ণ হতেই আপনার টাকা বিকাশ/নগদে ক্লিয়ার। জিরো COD চার্জ!</p>
-        </div>
-    </div>
 
-    <!-- COVERAGE AREA -->
-    <div class="coverage">
-        <h2>আমাদের সার্ভিস এরিয়া</h2>
-        <div class="area-tags">
-            <span class="tag">চাষাঢ়া</span>
-            <span class="tag">ফতুল্লা</span>
-            <span class="tag">সিদ্ধিরগঞ্জ</span>
-            <span class="tag">বন্দর</span>
-            <span class="tag">সোনারগাঁও</span>
-        </div>
-    </div>
+        <!-- CALL TO ACTION SECTION -->
+        <section class="cta-section">
+            <h2>আজই যুক্ত হোন আমাদের সাথে!</h2>
+            <p>আপনার অনলাইন বিজনেসের পার্সেল দ্রুত পৌঁছে দিতে আমরা আছি আপনার পাশে।</p>
+            <div class="cta-buttons">
+                <a href="merchant.html" class="btn btn-primary">মার্চেন্ট হোন</a>
+                <a href="delivery.html" class="btn btn-secondary">রাইডার হিসেবে যোগ দিন</a>
+            </div>
+        </section>
 
-
-    <div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 900px; margin: 0 auto; padding: 10px; color: #2d3748;">
-
-    <!-- ANNOUNCEMENT BANNER -->
-    <div style="background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%); color: white; padding: 15px 20px; border-radius: 12px; text-align: center; font-weight: bold; margin-bottom: 25px; box-shadow: 0 4px 10px rgba(255,107,107,0.3);">
-        🚚 পার্সেল পিক-আপ টাইম: সকাল ১০:০০ টা থেকে দুপুর ১২:০০ টা (সেম-ডে ডেলিভারির জন্য)
-    </div>
-
-    <!-- MERCHANTS PARCEL GUIDELINES -->
-    <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 25px; margin-bottom: 30px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
-        <h3 style="color: #0052D4; font-size: 20px; margin-top: 0; margin-bottom: 15px; border-bottom: 2px solid #ebf8ff; padding-bottom: 8px;">
-            📝 মার্চেন্টদের পার্সেল এন্ট্রি দেওয়ার নিয়মাবলী:
-        </h3>
-        <ul style="line-height: 1.8; padding-left: 20px; font-size: 15px;">
-            <li><strong>সঠিক কাস্টমার নম্বর:</strong> পার্সেল বুক করার সময় কাস্টমারের সচল ১১ ডিজিটের মোবাইল নম্বর প্রদান করুন।</li>
-            <li><strong>ঠিকানা ও এরিয়া:</strong> কাস্টমারের ফুল এড্রেসের সাথে নির্দিষ্ট এরিয়া (যেমন: চাষাঢ়া, ফতুল্লা, সিদ্ধিরগঞ্জ, বন্দর) উল্লেখ করুন।</li>
-            <li><strong>ক্যাশ কালেকশন (COD):</strong> প্রোডাক্টের দাম এবং ডেলিভারি চার্জসহ মোট টাকা COD Amount ঘরে লিখুন।</li>
-            <li><strong>প্যাকিং নির্দেশিকা:</strong> ভঙ্গুর বা লিকুইড আইটেম হলে ভালোভাবে বাবল র‍্যাপ করে পার্সেলের ওপর <em>"Fragile"</em> লিখে দিন।</li>
-            <li><strong>পিক-আপ নিশ্চিতকরণ:</strong> দুপুর ১২:০০ টার মধ্যে ফর্ম সাবমিট করলে আজকেই পিক-আপ সম্পন্ন হবে।</li>
-        </ul>
-    </div>
-
-    <!-- COVERAGE & CHARGE TABLE -->
-    <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 25px; margin-bottom: 30px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
-        <h3 style="color: #0052D4; font-size: 20px; margin-top: 0; margin-bottom: 15px; border-bottom: 2px solid #ebf8ff; padding-bottom: 8px;">
-            💳 ডেলিভারি চার্জ ও এরিয়া সমুহ
-        </h3>
-        <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 14px;">
-            <thead>
-                <tr style="background-color: #f7fafc; border-bottom: 2px solid #e2e8f0;">
-                    <th style="padding: 12px;">কভারেজ এলাকা</th>
-                    <th style="padding: 12px;">ডেলিভারি টাইমিং</th>
-                    <th style="padding: 12px;">ডেলিভারি চার্জ</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr style="border-bottom: 1px solid #edf2f7;">
-                    <td style="padding: 12px;">নারায়ণগঞ্জ শহর ও চাষাঢ়া</td>
-                    <td style="padding: 12px;">সেম-ডে (বিকেল/সন্ধ্যা)</td>
-                    <td style="padding: 12px; font-weight: bold; color: #2b6cb0;">৭০ টাকা</td>
-                </tr>
-                <tr style="border-bottom: 1px solid #edf2f7;">
-                    <td style="padding: 12px;">ফতুল্লা, সিদ্ধিরগঞ্জ ও বন্দর</td>
-                    <td style="padding: 12px;">সেম-ডে (সন্ধ্যা/রাত)</td>
-                    <td style="padding: 12px; font-weight: bold; color: #2b6cb0;">৮০ টাকা</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-    <!-- BOOKING FORM -->
-    <div class="form-container" id="book-order">
-        <h2 class="section-title">অনলাইন পার্সেল বুকিং দিন</h2>
-        <p style="margin-bottom: 20px; color: #718096;">নিচের ফর্মে তথ্য পূরণ করে পার্সেল বুক করুন:</p>
-        
-        <!-- আপনার Google Form এর Embed Link নিচে src এর ভেতর বসান -->
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfnxcEbhfiCyRtmOyPAsSCrWakAWq0xyzyhc86xRz6YLykhxg/viewform?usp=publish-editor/viewform?embedded=true" width="100%" height="700" frameborder="0" marginheight="0" marginwidth="0">লোডিং…</iframe>
     </div>
 
     <!-- FOOTER -->
     <footer>
-        <h3>QuickPik Narayanganj</h3>
-        <p style="margin: 10px 0;">যোগাযোগ:QuickPikc1732</p>
-        <p style="font-size: 14px; color: #a0aec0;">&copy; 2026/2027 QuickPik Narayanganj. All rights reserved.</p>
+        <h3>QuickPick Narayanganj</h3>
+        <p>হটলাইন: 09638501732 | ইমেইল: info@quickpikng.com</p>
+        <p>&copy; 2026/2027 QuickPick Narayanganj. All rights reserved.</p>
     </footer>
 
-</div>
-
 </body>
-  </html>
+</html>
