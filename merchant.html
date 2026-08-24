@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickPick Narayanganj | Merchant Dashboard</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #f8fafc;
+            color: #1e293b;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* NAVIGATION BAR (HOME PAGE STYLE) */
+        header {
+            background: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #0052D4;
+            text-decoration: none;
+        }
+        .logo span {
+            color: #FF6B6B;
+        }
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 15px;
+            align-items: center;
+        }
+        .nav-menu li a {
+            text-decoration: none;
+            color: #475569;
+            font-weight: 600;
+            font-size: 0.95rem;
+            padding: 8px 14px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        .nav-menu li a:hover, .nav-menu li a.active {
+            color: #0052D4;
+            background-color: #eff6ff;
+        }
+        .btn-merchant {
+            background-color: #0052D4 !important;
+            color: #ffffff !important;
+            border-radius: 50px !important;
+        }
+
+        /* DASHBOARD HEADER BANNER */
+        .dashboard-hero {
+            background: linear-gradient(135deg, #0052D4 0%, #4364F7 50%, #6FB1FC 100%);
+            color: #ffffff;
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 20px;
+            margin: 30px 0;
+            box-shadow: 0 10px 25px rgba(0, 82, 212, 0.15);
+        }
+        .dashboard-hero h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+        .dashboard-hero p {
+            font-size: 1.1rem;
+            color: #e0e8ff;
+        }
+
+        /* NOTICE & GUIDELINES */
+        .notice-box {
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-left: 5px solid #FF6B6B;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+        .notice-box h3 {
+            color: #1e293b;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        .notice-box ul {
+            padding-left: 20px;
+            color: #475569;
+            font-size: 0.95krem;
+        }
+        .notice-box li {
+            margin-bottom: 5px;
+        }
+
+        /* FORM CONTAINER */
+        .form-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 50px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.03);
+        }
+        .form-card h2 {
+            color: #0052D4;
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #334155;
+        }
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #cbd5e1;
+            border-radius: 10px;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+            border-color: #0052D4;
+        }
+        .submit-btn {
+            width: 100%;
+            background-color: #0052D4;
+            color: #ffffff;
+            padding: 14px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .submit-btn:hover {
+            background-color: #1d4ed8;
+        }
+
+        /* FOOTER (HOME PAGE STYLE) */
+        footer {
+            background: #0f172a;
+            color: #ffffff;
+            text-align: center;
+            padding: 30px;
+            border-radius: 16px 16px 0 0;
+            margin-top: 40px;
+        }
+        footer p {
+            color: #94a3b8;
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .nav-menu {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 8px;
+            }
+            .form-card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <div class="container navbar">
+            <a href="index.html" class="logo">QuickPick <span>NG</span></a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="merchant.html" class="btn-merchant active">Become a Merchant</a></li>
+                <li><a href="delivery.html">Become a Delivery Hero</a></li>
+                <li><a href="track.html">Track Parcel</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <!-- HERO BANNER -->
+        <section class="dashboard-hero">
+            <h1>মার্চেন্ট পার্সেল বুকিং পোর্টাল</h1>
+            <p>নিচের ফর্ম পূরণ করে আপনার পার্সেলটি আমাদের কাছে এন্ট্রি দিন।</p>
+        </section>
+
+        <!-- IMPORTANT NOTICE -->
+        <div class="notice-box">
+            <h3>⚠️ জরুরি নির্দেশনা:</h3>
+            <ul>
+                <li>প্রতিদিন সকাল ১০:০টা থেকে দুপুর ১২:০০ টার মধ্যে ফর্ম সাবমিਟ করলে সেম-ডে পিক-আপ ও ডেলিভারি নিশ্চিত করা হবে।</li>
+                <li>কাস্টমারের ফোন নম্বর এবং সম্পূর্ণ ঠিকানা (এরিয়া সহ) সঠিকভাবে প্রদান করুন।</li>
+            </ul>
+        </div>
+
+        <!-- BOOKING FORM WITH WEB3FORMS (API TO TELEGRAM) -->
+        <div class="form-card">
+            <h2>নতুন পার্সেল এন্ট্রি ফর্ম</h2>
+            
+            <form action="https://api.web3forms.com/submit" method="POST">
+
+                <!-- আপনার Web3Forms Access Key এখানে বসাবেন -->
+                <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+                <input type="hidden" name="subject" value="🚀 নতুন পার্সেল অর্ডার এসেছে - QuickPik">
+
+                <div class="form-group">
+                    <label>মার্চেন্ট / শপের নাম:</label>
+                    <input type="text" name="Merchant_Name" placeholder="আপনার দোকানের নাম লিখুন" required>
+                </div>
+
+                <div class="form-group">
+                    <label>মার্চেন্ট মোবাইল নম্বর:</label>
+                    <input type="tel" name="Merchant_Phone" placeholder="017xxxxxxxx" required>
+                </div>
+
+                <div class="form-group">
+                    <label>কাস্টমারের পূর্ণ ঠিকানা (এরিয়াসহ):</label>
+                    <textarea name="Customer_Address" rows="3" placeholder="বাসা/রোড, থানা, এরিয়া (যেমন: চাষাঢ়া, নারায়ণগঞ্জ)" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>কাস্টমারের মোবাইল নম্বর:</label>
+                    <input type="tel" name="Customer_Phone" placeholder="018xxxxxxxx" required>
+                </div>
+
+                <div class="form-group">
+                    <label>সার্ভিস এরিয়া:</label>
+                    <select name="Delivery_Area" required>
+                        <option value="">এরিয়া সিলেক্ট করুন</option>
+                        <option value="Narshingdi/Narayanganj City (70 Tk)">নারায়ণগঞ্জ শহর ও চাষাঢ়া (৭০ টাকা)</option>
+                        <option value="Fatullah/Siddhirganj/Bandar (80 Tk)">ফতুল্লা, সিদ্ধিরগঞ্জ, বন্দর ও সোনারগাঁও (৮০ টাকা)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>ক্যাশ কালেকশন পরিমাণ (COD Amount Tk):</label>
+                    <input type="number" name="COD_Amount" placeholder="মোট টাকার পরিমাণ লিখুন" required>
+                </div>
+
+                <button type="submit" class="submit-btn">পার্সেল সাবমিট করুন</button>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <h3>QuickPik Narayanganj</h3>
+            <p>হটলাইন: 09638501732 | ইমেইল: info@quickpikng.com</p>
+            <p>&copy; 2026/2027 QuickPick Narayanganj. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+  </html>
