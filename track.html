@@ -19,7 +19,7 @@
         .container {
             max-width: 1100px;
             margin: 0 auto;
-            padding: 0 15px;
+            padding: 0 20px;
         }
 
         /* NAVIGATION BAR */
@@ -58,9 +58,9 @@
             font-size: 0.95rem;
             padding: 8px 14px;
             border-radius: 8px;
-            transition: all 0.3s;
+            transition: all 0.3s ease;
         }
-        .nav-menu li a.active {
+        .nav-menu li a:hover, .nav-menu li a.active {
             color: #0052D4;
             background-color: #eff6ff;
         }
@@ -170,6 +170,7 @@
             .nav-menu {
                 flex-wrap: wrap;
                 justify-content: center;
+                gap: 8px;
             }
             .track-btn {
                 width: 100%;
@@ -184,10 +185,10 @@
         <div class="container navbar">
             <a href="index.html" class="logo">QuickPick <span>NG</span></a>
             <ul class="nav-menu">
-                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="merchant.html" class="btn-merchant">Become a Merchant</a></li>
                 <li><a href="delivery.html">Become a Delivery Hero</a></li>
-                <li><a href="track.html">Track Parcel</a></li>
+                <li><a href="track.html" class="active">Track Parcel</a></li>
                 <li><a href="about.html">About Us</a></li>
             </ul>
         </div>
@@ -241,4 +242,4 @@
     }
     </script>
 </body>
-    </html>
+                </html>
