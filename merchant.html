@@ -235,12 +235,7 @@
         <!-- BOOKING FORM WITH WEB3FORMS (API TO TELEGRAM) -->
         <div class="form-card">
             <h2>নতুন পার্সেল এন্ট্রি ফর্ম</h2>
-            
-            <form action="https://api.web3forms.com/submit" method="POST">
 
-                <!-- আপনার Web3Forms Access Key এখানে বসাবেন -->
-                <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
-                <input type="hidden" name="subject" value="🚀 নতুন পার্সেল অর্ডার এসেছে - QuickPick">
 
                 <div class="form-group">
                     <label>মার্চেন্ট / শপের নাম:</label>
@@ -290,5 +285,45 @@
         <p>&copy; 2026/2027 QuickPick Narayanganj. All rights reserved.</p>
     </footer>
 
+<script>
+document.querySelector('form').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const botToken = "8969887921:AAHkErvAxPNV5pwXufEn-zilw_m4faeVd0M"; // আপনার বোট টোকেন
+    const chatId = "-1004374470184";     // আপনার চ্যাট আইডি
+
+    const merchantName = this.Merchant_Name.value;
+    const merchantPhone = this.Merchant_Phone.value;
+    const pickupAddr = this.Pickup_Address.value;
+    const customerName = this.Customer_Name.value;
+    const customerPhone = this.Customer_Phone.value;
+    const deliveryAddr = this.Delivery_Address.value;
+    const cod = this.COD_Amount.value;
+
+    const text = `🚀 *নতুন পার্সেল বুকিং!* \n\n` +
+                 `👤 *মার্চেন্ট:* ${merchantName} (${merchantPhone})\n` +
+                 `📍 *পিকআপ:* ${pickupAddr}\n\n` +
+                 `📦 *কাস্টমার:* ${customerName} (${customerPhone})\n` +
+                 `🏡 *ডেলিভারি:* ${deliveryAddr}\n` +
+                 `💰 *COD:* ${cod} Tk`;
+
+    fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            chat_id: chatId,
+            text: text,
+            parse_mode: 'Markdown'
+        })
+    })
+    .then(response => {
+        alert('পার্সেল সফলভাবে সাবমিট হয়েছে!');
+        this.reset();
+    })
+    .catch(error => {
+        alert('কোথাও ভুল হয়েছে, আবার চেষ্টা করুন।');
+    });
+});
+</script>
 </body>
 </html>
