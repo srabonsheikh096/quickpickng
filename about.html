@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QuickPick Narayanganj | About Us</title>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             box-sizing: border-box;
@@ -22,7 +24,7 @@
             padding: 0 20px;
         }
 
-        /* NAVIGATION BAR (SAME AS HOME PAGE) */
+        /* NAVIGATION BAR */
         header {
             background: #ffffff;
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
@@ -73,7 +75,7 @@
             background-color: #1d4ed8 !important;
         }
 
-        /* HERO / HEADER SECTION */
+        /* HERO SECTION */
         .about-hero {
             background: linear-gradient(135deg, #0052D4 0%, #4364F7 50%, #6FB1FC 100%);
             color: #ffffff;
@@ -128,9 +130,8 @@
             border-radius: 12px;
             padding: 25px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.02);
-            border-top: 1px solid #e2e8f0;
-            border-right: 1px solid #e2e8f0;
-            border-bottom: 1px solid #e2e8f0;
+            border: 1px solid #e2e8f0;
+            border-left-width: 5px;
         }
         .info-box h3 {
             color: #0f172a;
@@ -142,7 +143,64 @@
             font-size: 0.95rem;
         }
 
-        /* FOUNDER SECTION */
+        /* TEAM SECTION (3 FRAMES) */
+        .team-section {
+            margin-bottom: 30px;
+        }
+        .section-title {
+            text-align: center;
+            color: #0052D4;
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        .team-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 25px 20px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+        }
+        .profile-img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #eff6ff;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        }
+        .member-name {
+            font-size: 1.25rem;
+            color: #0f172a;
+            font-weight: 700;
+        }
+        .member-role {
+            font-size: 0.9rem;
+            color: #0052D4;
+            font-weight: 600;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+        }
+        .member-desc {
+            font-size: 0.9rem;
+            color: #64748b;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        /* FOUNDER NOTE SECTION */
         .founder-box {
             background: #eff6ff;
             border: 1px solid #bfdbfe;
@@ -170,7 +228,33 @@
             font-style: italic;
         }
 
-        /* FOOTER (SAME AS HOME PAGE) */
+        /* SOCIAL BUTTONS */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+        }
+        .social-btn {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: opacity 0.3s ease;
+        }
+        .social-btn:hover {
+            opacity: 0.85;
+        }
+        .bg-fb { background-color: #1877F2; }
+        .bg-insta { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+        .bg-wa { background-color: #25D366; }
+        .bg-tg { background-color: #229ED9; }
+
+        /* FOOTER */
         footer {
             background: #0f172a;
             color: #ffffff;
@@ -201,7 +285,7 @@
 </head>
 <body>
 
-    <!-- NAVBAR (EXACT HOME PAGE NAVBAR) -->
+    <!-- NAVBAR -->
     <header>
         <div class="container navbar">
             <a href="index.html" class="logo">QuickPick <span>NG</span></a>
@@ -224,7 +308,7 @@
 
         <!-- OUR STORY -->
         <div class="content-card">
-            <h2>আমাদের গল্প (Our Story)</h2>
+            <h2>আমাদের গল্প </h2>
             <p>নারায়ণগঞ্জের ই-কমার্স ও লোকাল অনলাইন মার্চেন্টদের লজিস্টিকস সমস্যা দূর করতে <strong>QuickPick Narayanganj</strong>-এর যাত্রা শুরু। সময়মতো কাস্টমারের হাতে পার্সেল পৌঁছানো এবং দ্রুততম সময়ে ক্যাশ-অন-ডেলিভারির (COD) টাকা মার্চেন্টের হাতে ফিরিয়ে দেওয়াই আমাদের মূল উদ্দেশ্য।</p>
             <p>আমরা বিশ্বাস করি, একটি শক্তিশালী ও দ্রুত ডেলিভারি নেটওয়ার্ক যেকোনো অনলাইন ব্যবসাকে কয়েক গুণ বাড়িয়ে দিতে পারে। চাষাঢ়া, ফতুল্লা, সিদ্ধিরগঞ্জ, বন্দর কিংবা সোনারগাঁও—নারায়ণগঞ্জের যেকোনো প্রান্তেই আমরা পৌঁছে দিচ্ছি বিশ্বস্ততার পার্সেল।</p>
         </div>
@@ -232,12 +316,62 @@
         <!-- VISION & MISSION -->
         <div class="grid-2">
             <div class="info-box">
-                <h3>🎯 আমাদের ভিশন (Our Vision)</h3>
+                <h3>🎯 আমাদের ভিশন </h3>
                 <p>নারায়ণগঞ্জ শহরের ভেতরে সবচেয়ে দ্রুততম, নিরাপদ এবং প্রযুক্তি-নির্ভর হাইপার-লোকাল কুরিয়ার নেটওয়ার্ক হিসেবে নিজেদের গড়ে তোলা।</p>
             </div>
             <div class="info-box">
-                <h3>🚀 আমাদের মিশন (Our Mission)</h3>
+                <h3>🚀 আমাদের মিশন </h3>
                 <p>সেম-ডে ডেলিভারি সুনিশ্চিত করা, জিরো অতিরিক্ত হিডেন চার্জ রাখা এবং মার্চেন্টদের জন্য দ্রুততম পেমেন্ট সার্ভিস প্রদান করা।</p>
+            </div>
+        </div>
+
+        <!-- TEAM SECTION -->
+        <div class="team-section">
+            <h2 class="section-title">আমাদের টিম </h2>
+            <div class="team-grid">
+                
+                <!-- FOUNDER -->
+                <div class="team-card">
+                    <img src="images/founder.jpg" alt="Founder" class="profile-img" onerror="this.src='https://via.placeholder.com/130'">
+                    <h3 class="member-name">প্রতিষ্ঠাতার নাম</h3>
+                    <p class="member-role">Founder</p>
+                    <p class="member-desc">নারায়ণগঞ্জের ভেতর দ্রুত ও নির্ভরযোগ্য পার্সেল ডেলিভারি নিশ্চিত করার লক্ষ্য নিয়ে সার্ভিসটির সূচনা করেন।</p>
+                    <div class="social-links">
+                        <a href="#" target="_blank" class="social-btn bg-fb"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" target="_blank" class="social-btn bg-insta"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/8801700000000" target="_blank" class="social-btn bg-wa"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://t.me/username" target="_blank" class="social-btn bg-tg"><i class="fab fa-telegram-plane"></i></a>
+                    </div>
+                </div>
+
+                <!-- CEO -->
+                <div class="team-card">
+                    <img src="images/ceo.jpg" alt="CEO" class="profile-img" onerror="this.src='https://via.placeholder.com/130'">
+                    <h3 class="member-name">সিইও-এর নাম</h3>
+                    <p class="member-role">Chief Executive Officer (CEO)</p>
+                    <p class="member-desc">কোম্পানির দীর্ঘমেয়াদী পরিকল্পনা ও সার্বিক ব্যবসায়িক প্রবৃদ্ধি পরিচালনা করেন।</p>
+                    <div class="social-links">
+                        <a href="#" target="_blank" class="social-btn bg-fb"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" target="_blank" class="social-btn bg-insta"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/8801700000000" target="_blank" class="social-btn bg-wa"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://t.me/username" target="_blank" class="social-btn bg-tg"><i class="fab fa-telegram-plane"></i></a>
+                    </div>
+                </div>
+
+                <!-- MANAGER -->
+                <div class="team-card">
+                    <img src="images/manager.jpg" alt="Manager" class="profile-img" onerror="this.src='https://via.placeholder.com/130'">
+                    <h3 class="member-name">ম্যানেজারের নাম</h3>
+                    <p class="member-role">Operations Manager</p>
+                    <p class="member-desc">প্রতিদিনের পার্সেল পিকআপ, ডেলিভারি প্রসেসিং এবং রাইডার নেটওয়ার্ক ম্যানেজমেন্ট নিশ্চিত করেন।</p>
+                    <div class="social-links">
+                        <a href="#" target="_blank" class="social-btn bg-fb"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" target="_blank" class="social-btn bg-insta"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/8801700000000" target="_blank" class="social-btn bg-wa"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://t.me/username" target="_blank" class="social-btn bg-tg"><i class="fab fa-telegram-plane"></i></a>
+                    </div>
+                </div>
+
             </div>
         </div>
 
@@ -250,12 +384,13 @@
 
     </div>
 
-    <!-- FOOTER (EXACT HOME PAGE FOOTER) -->
+    <!-- FOOTER -->
     <footer>
-        <h3>QuickPick Narayanganj</h3>
-        <p>হটলাইন: 09638501732 | ইমেইল: info@quickpikng.com</p>
-        <p>&copy; 2026/2027 QuickPick Narayanganj. All rights reserved.</p>
+            <h3>QuickPick Narayanganj</h3>
+            <p>হটলাইন: 09638501732 | ইমেইল: info@quickpikng.com</p>
+            <p>&copy; 2026/2027 QuickPick Narayanganj. All rights reserved.</p>
+        </div>
     </footer>
 
 </body>
-    </html>
+</html>
